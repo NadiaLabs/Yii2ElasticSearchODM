@@ -1,0 +1,43 @@
+{
+    "name": "nadialabs/yii2-elasticsearch-odm",
+    "description": "An integration of ElasticSearchODM for Yii2 frameworks",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ElasticSearch", "Elastic", "ELK", "Yii2"],
+    "authors": [
+        {
+            "name": "LeoOnTheEarth",
+            "email": "leo.on.the.earth@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "nadialabs/elasticsearch-odm": "^0.1",
+        "yiisoft/yii2": "^2.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "symfony/phpunit-bridge": "^3.4|^4.4|^5.4|^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nadia\\ElasticSearchODM\\Yii2\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nadia\\ElasticSearchODM\\Yii2\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
