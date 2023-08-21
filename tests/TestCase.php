@@ -1,8 +1,9 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2\Tests;
+namespace Nadia\ElasticsearchODM\Yii2\Tests;
 
-use Nadia\ElasticSearchODM\Yii2\Tests\Cache\Yii2Cache;
+use Nadia\ElasticsearchODM\Yii2\Module;
+use Nadia\ElasticsearchODM\Yii2\Tests\components\Cache\Yii2Cache;
 use yii\helpers\ArrayHelper;
 
 class TestCase extends \PHPUnit\Framework\TestCase
@@ -28,6 +29,11 @@ class TestCase extends \PHPUnit\Framework\TestCase
                 '@bower' => '@vendor/bower-asset',
                 '@npm' => '@vendor/npm-asset',
             ],
+            'modules' => [
+                'ElasticsearchODM' => [
+                    'class' => Module::class,
+                ],
+            ],
             'components' => [
                 'request' => [
                     'cookieValidationKey' => 'wefJDF8sfdsfSDefwqdxj9oq',
@@ -35,12 +41,12 @@ class TestCase extends \PHPUnit\Framework\TestCase
                     'scriptUrl' => '/index.php',
                     'isConsoleRequest' => false,
                 ],
-                'ElasticSearchODM' => [
-                    'class' => 'Nadia\ElasticSearchODM\Yii2\ElasticSearchODM',
+                'ElasticsearchODM' => [
+                    'class' => 'Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM',
                     'hosts' => [],
                     'indexNamePrefix' => 'dev',
                     'documentDirs' => [
-                        'Nadia\ElasticSearchODM\Yii2\Tests\Document\\' => __DIR__ . '/Document',
+                        'Nadia\ElasticsearchODM\Yii2\Tests\components\Document\\' => __DIR__ . '/components/Document',
                     ],
                     'cacheDir' => $cacheDir,
                     'cache' => new Yii2Cache(),

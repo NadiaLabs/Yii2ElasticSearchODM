@@ -1,17 +1,17 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2;
+namespace Nadia\ElasticsearchODM\Yii2\components;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Nadia\ElasticSearchODM\ClassMetadata\ClassMetadataLoader;
 use Nadia\ElasticSearchODM\Document\IndexNameProvider;
 use Nadia\ElasticSearchODM\Document\Manager;
 use Nadia\ElasticSearchODM\Helper\ElasticSearchHelper;
-use Nadia\ElasticSearchODM\Yii2\Cache\Pool;
-use Nadia\ElasticSearchODM\Yii2\Cache\Yii2CacheInterface;
+use Nadia\ElasticsearchODM\Yii2\components\Cache\Pool;
+use Nadia\ElasticsearchODM\Yii2\components\Cache\Yii2CacheInterface;
 use yii\base\Component;
 
-class ElasticSearchODM extends Component
+class ElasticsearchODM extends Component
 {
     /**
      * @var array
@@ -92,7 +92,7 @@ class ElasticSearchODM extends Component
      */
     public static function make()
     {
-        return \Yii::$app->get('ElasticSearchODM');
+        return \Yii::$app->get('ElasticsearchODM');
     }
 
     public function init()

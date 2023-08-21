@@ -1,6 +1,6 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2\Tests\Document\Repository;
+namespace Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Repository;
 
 use Nadia\ElasticSearchODM\Document\Repository;
 

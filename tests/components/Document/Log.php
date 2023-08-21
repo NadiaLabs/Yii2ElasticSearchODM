@@ -1,6 +1,6 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2\Tests\Document;
+namespace Nadia\ElasticsearchODM\Yii2\Tests\components\Document;
 
 use Nadia\ElasticSearchODM\Annotations as ES;
 use Nadia\ElasticSearchODM\Document\Traits\ColumnId;
@@ -8,7 +8,7 @@ use Nadia\ElasticSearchODM\Document\Traits\ColumnId;
 /**
  * @ES\Document(
  *     index_type_name="log",
- *     repository_class_name="Nadia\ElasticSearchODM\Yii2\Tests\Document\Repository\LogRepository",
+ *     repository_class_name="Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Repository\LogRepository",
  * )
  * @ES\Template(
  *     name="template-%s-access-log",

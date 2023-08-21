@@ -1,16 +1,17 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2\Tests;
+namespace Nadia\ElasticsearchODM\Yii2\Tests\components;
 
 use Nadia\ElasticSearchODM\ClassMetadata\ClassMetadataLoader;
 use Nadia\ElasticSearchODM\Document\IndexNameProvider;
 use Nadia\ElasticSearchODM\Document\Manager;
-use Nadia\ElasticSearchODM\Yii2\Cache\Pool;
-use Nadia\ElasticSearchODM\Yii2\ElasticSearchODM;
-use Nadia\ElasticSearchODM\Yii2\EmptyClient;
-use Nadia\ElasticSearchODM\Yii2\Tests\Cache\Yii2Cache;
-use Nadia\ElasticSearchODM\Yii2\Tests\Document\Log;
-use Nadia\ElasticSearchODM\Yii2\Tests\Document\Repository\LogRepository;
+use Nadia\ElasticsearchODM\Yii2\components\Cache\Pool;
+use Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM;
+use Nadia\ElasticsearchODM\Yii2\components\EmptyClient;
+use Nadia\ElasticsearchODM\Yii2\Tests\components\Cache\Yii2Cache;
+use Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Log;
+use Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Repository\LogRepository;
+use Nadia\ElasticsearchODM\Yii2\Tests\TestCase;
 
 class ElasticSearchODMTest extends TestCase
 {
@@ -18,9 +19,9 @@ class ElasticSearchODMTest extends TestCase
     {
         $this->mockWebApplication();
 
-        $odm = ElasticSearchODM::make();
+        $odm = ElasticsearchODM::make();
 
-        $this->assertInstanceOf(ElasticSearchODM::class, $odm);
+        $this->assertInstanceOf(ElasticsearchODM::class, $odm);
         $this->assertInstanceOf(LogRepository::class, $odm->getRepository(Log::class));
         $this->assertInstanceOf(Manager::class, $odm->getManager());
         $this->assertInstanceOf(EmptyClient::class, $odm->getClient());

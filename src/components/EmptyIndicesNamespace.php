@@ -1,6 +1,6 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2;
+namespace Nadia\ElasticsearchODM\Yii2\components;
 
 /**
  * ElasticSearch IndicesNamespace for empty hosts

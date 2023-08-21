@@ -1,8 +1,8 @@
 <?php
 
-namespace Nadia\ElasticSearchODM\Yii2\Tests\Cache;
+namespace Nadia\ElasticsearchODM\Yii2\Tests\components\Cache;
 
-use Nadia\ElasticSearchODM\Yii2\Cache\Yii2CacheInterface;
+use Nadia\ElasticsearchODM\Yii2\components\Cache\Yii2CacheInterface;
 
 class Yii2Cache implements Yii2CacheInterface
 {

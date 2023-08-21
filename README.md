@@ -1,7 +1,7 @@
-Yii2 extension for ElasticSearchODM
-===================================
+An ElasticsearchODM Yii2 Module
+===============================
 
-This is the ElasticSearchODM extension for [Yii framework 2.0](https://www.yiiframework.com).
+This is an ElasticsearchODM Module for [Yii framework 2.0](https://www.yiiframework.com).
 
 ## Installation
 
