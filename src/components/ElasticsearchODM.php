@@ -3,10 +3,10 @@
 namespace Nadia\ElasticsearchODM\Yii2\components;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Nadia\ElasticSearchODM\ClassMetadata\ClassMetadataLoader;
-use Nadia\ElasticSearchODM\Document\IndexNameProvider;
-use Nadia\ElasticSearchODM\Document\Manager;
-use Nadia\ElasticSearchODM\Helper\ElasticSearchHelper;
+use Nadia\ElasticsearchODM\ClassMetadata\ClassMetadataLoader;
+use Nadia\ElasticsearchODM\Document\IndexNameProvider;
+use Nadia\ElasticsearchODM\Document\Manager;
+use Nadia\ElasticsearchODM\Helper\ElasticsearchHelper;
 use Nadia\ElasticsearchODM\Yii2\components\Cache\Pool;
 use Nadia\ElasticsearchODM\Yii2\components\Cache\Yii2CacheInterface;
 use yii\base\Component;
@@ -44,7 +44,7 @@ class ElasticsearchODM extends Component
      * <code>
      *   [
      *     '$classNamePrefix1' => '$dir1',
-     *     '\My\Namespace\ElasticSearchDocument\\' => '/path/to/documents',
+     *     '\My\Namespace\ElasticsearchDocument\\' => '/path/to/documents',
      *   ]
      * </code>
      */
@@ -66,7 +66,7 @@ class ElasticsearchODM extends Component
     private $manager;
 
     /**
-     * @var \Elastic\ElasticSearch\Client|\ElasticSearch\Client
+     * @var \Elastic\Elasticsearch\Client|\Elasticsearch\Client
      */
     private $client;
 
@@ -105,7 +105,7 @@ class ElasticsearchODM extends Component
     /**
      * @param string $documentClassName
      *
-     * @return \Nadia\ElasticSearchODM\Document\Repository
+     * @return \Nadia\ElasticsearchODM\Document\Repository
      *
      * @throws \ReflectionException
      */
@@ -132,11 +132,11 @@ class ElasticsearchODM extends Component
     }
 
     /**
-     * @return \Elastic\ElasticSearch\Client|\ElasticSearch\Client
+     * @return \Elastic\Elasticsearch\Client|\Elasticsearch\Client
      */
     public function getClient()
     {
-        $className = ElasticSearchHelper::getClientBuilderClassName();
+        $className = ElasticsearchHelper::getClientBuilderClassName();
 
         if (null === $this->client) {
             if (!empty($this->hosts)) {

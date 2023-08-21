@@ -6,7 +6,7 @@ use Psr\Cache\CacheItemInterface;
 use Psr\Cache\CacheItemPoolInterface;
 
 /**
- * Cache Pool for ElasticSearchODM
+ * Cache Pool for ElasticsearchODM
  */
 class Pool implements CacheItemPoolInterface
 {

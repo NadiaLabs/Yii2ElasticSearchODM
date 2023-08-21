@@ -3,7 +3,7 @@
 namespace Nadia\ElasticsearchODM\Yii2\components;
 
 /**
- * ElasticSearch Client for empty hosts
+ * Elasticsearch Client for empty hosts
  */
 class EmptyClient
 {

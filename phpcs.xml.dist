@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="ElasticsearchODM">
+<ruleset name="ElasticsearchODMYii2">
     <description>The ElasticsearchODM Yii2 Module coding standard</description>
 
     <arg name="basepath" value="."/>

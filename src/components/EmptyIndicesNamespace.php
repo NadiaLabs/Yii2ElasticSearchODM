@@ -3,7 +3,7 @@
 namespace Nadia\ElasticsearchODM\Yii2\components;
 
 /**
- * ElasticSearch IndicesNamespace for empty hosts
+ * Elasticsearch IndicesNamespace for empty hosts
  */
 class EmptyIndicesNamespace
 {

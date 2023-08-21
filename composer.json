@@ -3,7 +3,7 @@
     "description": "An integration of ElasticsearchODM for Yii2 frameworks",
     "type": "library",
     "license": "MIT",
-    "keywords": ["ElasticSearch", "Elastic", "ELK", "Yii2"],
+    "keywords": ["Elasticsearch", "Elastic", "ELK", "Yii2"],
     "authors": [
         {
             "name": "LeoOnTheEarth",

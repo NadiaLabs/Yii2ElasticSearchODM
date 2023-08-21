@@ -2,8 +2,8 @@
 
 namespace Nadia\ElasticsearchODM\Yii2\Tests\components\Document;
 
-use Nadia\ElasticSearchODM\Annotations as ES;
-use Nadia\ElasticSearchODM\Document\Traits\ColumnId;
+use Nadia\ElasticsearchODM\Annotations as ES;
+use Nadia\ElasticsearchODM\Document\Traits\ColumnId;
 
 /**
  * @ES\Document(

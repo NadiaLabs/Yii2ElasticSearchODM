@@ -5,7 +5,7 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="ElasticSearchODM Yii2 Bridge Test Suite">
+        <testsuite name="ElasticsearchODM Yii2 Module Test Suite">
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>

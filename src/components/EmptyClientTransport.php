@@ -3,7 +3,7 @@
 namespace Nadia\ElasticsearchODM\Yii2\components;
 
 /**
- * ElasticSearch Client Transport for empty hosts
+ * Elasticsearch Client Transport for empty hosts
  */
 class EmptyClientTransport
 {

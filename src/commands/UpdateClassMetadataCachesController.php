@@ -13,7 +13,7 @@ use yii\console\Controller;
 class UpdateClassMetadataCachesController extends Controller
 {
     /**
-     * Update ElasticSearch Class Metadata caches
+     * Update Elasticsearch Class Metadata caches
      *
      * @throws ReflectionException
      * @throws InvalidConfigException

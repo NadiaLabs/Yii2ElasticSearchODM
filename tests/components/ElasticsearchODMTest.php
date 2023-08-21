@@ -2,9 +2,9 @@
 
 namespace Nadia\ElasticsearchODM\Yii2\Tests\components;
 
-use Nadia\ElasticSearchODM\ClassMetadata\ClassMetadataLoader;
-use Nadia\ElasticSearchODM\Document\IndexNameProvider;
-use Nadia\ElasticSearchODM\Document\Manager;
+use Nadia\ElasticsearchODM\ClassMetadata\ClassMetadataLoader;
+use Nadia\ElasticsearchODM\Document\IndexNameProvider;
+use Nadia\ElasticsearchODM\Document\Manager;
 use Nadia\ElasticsearchODM\Yii2\components\Cache\Pool;
 use Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM;
 use Nadia\ElasticsearchODM\Yii2\components\EmptyClient;
@@ -13,9 +13,9 @@ use Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Log;
 use Nadia\ElasticsearchODM\Yii2\Tests\components\Document\Repository\LogRepository;
 use Nadia\ElasticsearchODM\Yii2\Tests\TestCase;
 
-class ElasticSearchODMTest extends TestCase
+class ElasticsearchODMTest extends TestCase
 {
-    public function testElasticSearchODM()
+    public function testElasticsearchODM()
     {
         $this->mockWebApplication();
 

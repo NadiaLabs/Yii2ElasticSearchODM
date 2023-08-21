@@ -5,7 +5,7 @@ namespace Nadia\ElasticsearchODM\Yii2\components\Cache;
 use Psr\Cache\CacheItemInterface;
 
 /**
- * Cache Item for ElasticSearchODM
+ * Cache Item for ElasticsearchODM
  */
 class Item implements CacheItemInterface
 {
