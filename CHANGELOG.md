@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## v0.1.2
+
+- Change namespace to `Nadia\Yii2ElasticsearchODM`
+
 ## v0.1.1
 
 - Fix module's controller path
