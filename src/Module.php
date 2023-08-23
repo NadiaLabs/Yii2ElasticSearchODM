@@ -9,7 +9,7 @@ class Module extends \yii\base\Module
         parent::init();
 
         if (\Yii::$app instanceof \yii\console\Application) {
-            $this->controllerNamespace = 'Nadia\ElasticsearchODM\Yii2\commands';
+            $this->controllerNamespace = 'Nadia\Yii2ElasticsearchODM\commands';
             $this->setControllerPath(__DIR__ . '/commands');
         }
     }
