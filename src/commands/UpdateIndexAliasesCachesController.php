@@ -1,8 +1,8 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\commands;
+namespace Nadia\Yii2ElasticsearchODM\commands;
 
-use Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM;
+use Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM;
 use Psr\Cache\InvalidArgumentException;
 use yii\base\InvalidConfigException;
 use yii\console\Controller;
@@ -20,7 +20,7 @@ class UpdateIndexAliasesCachesController extends Controller
      */
     public function actionIndex()
     {
-        $indexNameProvider = ElasticsearchODM::make()->getIndexNameProvider();
+        $indexNameProvider = Yii2ElasticsearchODM::make()->getIndexNameProvider();
 
         $indexNameProvider->enableRefreshIndexAliasesCache();
 

@@ -22,12 +22,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Nadia\\ElasticsearchODM\\Yii2\\": "src/"
+            "Nadia\\Yii2ElasticsearchODM\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Nadia\\ElasticsearchODM\\Yii2\\Tests\\": "tests/"
+            "Nadia\\Yii2ElasticsearchODM\\Tests\\": "tests/"
         }
     },
     "config": {

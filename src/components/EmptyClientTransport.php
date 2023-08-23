@@ -1,6 +1,6 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\components;
+namespace Nadia\Yii2ElasticsearchODM\components;
 
 /**
  * Elasticsearch Client Transport for empty hosts

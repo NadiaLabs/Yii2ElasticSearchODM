@@ -1,17 +1,17 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\components;
+namespace Nadia\Yii2ElasticsearchODM\components;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Nadia\ElasticsearchODM\ClassMetadata\ClassMetadataLoader;
 use Nadia\ElasticsearchODM\Document\IndexNameProvider;
 use Nadia\ElasticsearchODM\Document\Manager;
 use Nadia\ElasticsearchODM\Helper\ElasticsearchHelper;
-use Nadia\ElasticsearchODM\Yii2\components\Cache\Pool;
-use Nadia\ElasticsearchODM\Yii2\components\Cache\Yii2CacheInterface;
+use Nadia\Yii2ElasticsearchODM\components\Cache\Pool;
+use Nadia\Yii2ElasticsearchODM\components\Cache\Yii2CacheInterface;
 use yii\base\Component;
 
-class ElasticsearchODM extends Component
+class Yii2ElasticsearchODM extends Component
 {
     /**
      * @var array

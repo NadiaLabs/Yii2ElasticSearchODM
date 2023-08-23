@@ -1,8 +1,8 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\commands;
+namespace Nadia\Yii2ElasticsearchODM\commands;
 
-use Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM;
+use Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM;
 use yii\base\InvalidConfigException;
 use yii\console\Controller;
 
@@ -44,7 +44,7 @@ class UpdateTemplatesController extends Controller
      */
     public function actionIndex($documentClassName = '')
     {
-        $odm = ElasticsearchODM::make();
+        $odm = Yii2ElasticsearchODM::make();
         $manager = $odm->getManager();
 
         $odm->getClassMetadataLoader()->enableUpdateCache();
@@ -118,7 +118,7 @@ class UpdateTemplatesController extends Controller
 
     private function diff($templateName, array $newTemplate)
     {
-        $client = ElasticsearchODM::make()->getClient();
+        $client = Yii2ElasticsearchODM::make()->getClient();
         $template = [];
         $diff = [];
         $val = function ($array, $key, $default) {

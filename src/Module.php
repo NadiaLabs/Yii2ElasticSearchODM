@@ -1,6 +1,6 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2;
+namespace Nadia\Yii2ElasticsearchODM;
 
 class Module extends \yii\base\Module
 {

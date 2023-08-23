@@ -1,8 +1,8 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\commands;
+namespace Nadia\Yii2ElasticsearchODM\commands;
 
-use Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM;
+use Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM;
 use ReflectionException;
 use yii\base\InvalidConfigException;
 use yii\console\Controller;
@@ -20,7 +20,7 @@ class UpdateClassMetadataCachesController extends Controller
      */
     public function actionIndex()
     {
-        $odm = ElasticsearchODM::make();
+        $odm = Yii2ElasticsearchODM::make();
         $classMetadataLoader = $odm->getClassMetadataLoader();
 
         $classMetadataLoader->enableUpdateCache();

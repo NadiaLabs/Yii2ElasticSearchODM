@@ -1,9 +1,9 @@
 <?php
 
-namespace Nadia\ElasticsearchODM\Yii2\Tests;
+namespace Nadia\Yii2ElasticsearchODM\Tests;
 
-use Nadia\ElasticsearchODM\Yii2\Module;
-use Nadia\ElasticsearchODM\Yii2\Tests\components\Cache\Yii2Cache;
+use Nadia\Yii2ElasticsearchODM\Module;
+use Nadia\Yii2ElasticsearchODM\Tests\components\Cache\Yii2Cache;
 use yii\helpers\ArrayHelper;
 
 class TestCase extends \PHPUnit\Framework\TestCase
@@ -42,11 +42,11 @@ class TestCase extends \PHPUnit\Framework\TestCase
                     'isConsoleRequest' => false,
                 ],
                 'ElasticsearchODM' => [
-                    'class' => 'Nadia\ElasticsearchODM\Yii2\components\ElasticsearchODM',
+                    'class' => 'Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM',
                     'hosts' => [],
                     'indexNamePrefix' => 'dev',
                     'documentDirs' => [
-                        'Nadia\ElasticsearchODM\Yii2\Tests\components\Document\\' => __DIR__ . '/components/Document',
+                        'Nadia\Yii2ElasticsearchODM\Tests\components\Document\\' => __DIR__ . '/components/Document',
                     ],
                     'cacheDir' => $cacheDir,
                     'cache' => new Yii2Cache(),
