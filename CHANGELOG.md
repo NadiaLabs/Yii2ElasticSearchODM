@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## v0.1.4
+
+- Auto create cache directory
+ 
 ## v0.1.3
 
 - Fix command namespace

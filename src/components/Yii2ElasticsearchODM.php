@@ -100,6 +100,10 @@ class Yii2ElasticsearchODM extends Component
         if (method_exists(AnnotationRegistry::class, 'registerLoader')) {
             AnnotationRegistry::registerLoader(['Yii', 'autoload']);
         }
+
+        if (!file_exists($this->cacheDir)) {
+            mkdir($this->cacheDir, 0755, true);
+        }
     }
 
     /**
