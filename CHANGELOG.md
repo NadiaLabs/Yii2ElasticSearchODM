@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## v0.1.3
+
+- Fix command namespace
+ 
 ## v0.1.2
 
 - Change namespace to `Nadia\Yii2ElasticsearchODM`
