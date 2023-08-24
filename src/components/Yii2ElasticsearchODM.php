@@ -212,9 +212,32 @@ class Yii2ElasticsearchODM extends Component
         $documentClassNames = [];
 
         foreach ($this->documentDirs as $classNamePrefix => $dir) {
-            foreach (scandir($dir) as $filename) {
-                if (is_file($dir . '/' . $filename)) {
-                    $documentClassNames[] = $classNamePrefix . substr($filename, 0, -4);
+            foreach ($this->doGetDocumentClassNames($classNamePrefix, $dir) as $className) {
+                $documentClassNames[] = $className;
+            }
+        }
+
+        return $documentClassNames;
+    }
+
+    public function doGetDocumentClassNames($classNamePrefix,  $dir)
+    {
+        $documentClassNames = [];
+
+        foreach (scandir($dir) as $filename) {
+            if ('.' === $filename || '..' === $filename) {
+                continue;
+            }
+
+            $filepath = $dir . '/' . $filename;
+
+            if (is_file($filepath)) {
+                $documentClassNames[] = $classNamePrefix . substr($filename, 0, -4);
+            } elseif (is_dir($filepath)) {
+                $classNamePrefix .= $filename . '\\';
+
+                foreach ($this->doGetDocumentClassNames($classNamePrefix, $filepath) as $className) {
+                    $documentClassNames[] = $className;
                 }
             }
         }

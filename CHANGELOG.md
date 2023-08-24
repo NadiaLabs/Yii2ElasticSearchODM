@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## v0.1.5
+
+- Fix document class names
+ 
 ## v0.1.4
 
 - Auto create cache directory
