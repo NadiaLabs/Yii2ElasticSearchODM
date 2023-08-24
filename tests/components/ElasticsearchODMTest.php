@@ -6,11 +6,11 @@ use Nadia\ElasticsearchODM\ClassMetadata\ClassMetadataLoader;
 use Nadia\ElasticsearchODM\Document\IndexNameProvider;
 use Nadia\ElasticsearchODM\Document\Manager;
 use Nadia\Yii2ElasticsearchODM\components\Cache\Pool;
-use Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM;
 use Nadia\Yii2ElasticsearchODM\components\EmptyClient;
+use Nadia\Yii2ElasticsearchODM\components\Yii2ElasticsearchODM;
 use Nadia\Yii2ElasticsearchODM\Tests\components\Cache\Yii2Cache;
 use Nadia\Yii2ElasticsearchODM\Tests\components\Document\Log;
-use Nadia\Yii2ElasticsearchODM\Tests\components\Document\Repository\LogRepository;
+use Nadia\Yii2ElasticsearchODM\Tests\components\Repository\LogRepository;
 use Nadia\Yii2ElasticsearchODM\Tests\TestCase;
 
 class ElasticsearchODMTest extends TestCase

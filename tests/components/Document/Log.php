@@ -8,7 +8,7 @@ use Nadia\ElasticsearchODM\Document\Traits\ColumnId;
 /**
  * @ES\Document(
  *     index_type_name="log",
- *     repository_class_name="Nadia\Yii2ElasticsearchODM\Tests\components\Document\Repository\LogRepository",
+ *     repository_class_name="Nadia\Yii2ElasticsearchODM\Tests\components\Repository\LogRepository",
  * )
  * @ES\Template(
  *     name="template-%s-access-log",
