@@ -3,6 +3,7 @@
 namespace Nadia\Yii2ElasticsearchODM\components;
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
+use Elastic\Elasticsearch\ClientBuilder;
 use Nadia\ElasticsearchODM\ClassMetadata\ClassMetadataLoader;
 use Nadia\ElasticsearchODM\Document\IndexNameProvider;
 use Nadia\ElasticsearchODM\Document\Manager;
@@ -59,6 +60,26 @@ class Yii2ElasticsearchODM extends Component
      * @var Yii2CacheInterface
      */
     public $cache;
+
+    /**
+     * @var array
+     */
+    public $clientBuilderOptions = [
+        // Basic authentication username.
+        'username' => '',
+        // Basic authentication password.
+        'password' => '',
+        // Enable or disable the SSL verification (default is true).
+        'sslVerification' => true,
+        // An array [$cert, $password] $cert is the name of a file containing a PEM formatted certificate,
+        // $password if the certificate requires a password.
+        'sslCert' => [],
+        // An array [$key, $password] $key is the name of a file containing a private SSL key,
+        // $password if the private key requires a password.
+        'sslKey' => [],
+        // SSL CA bundle.
+        'sslCA' => '',
+    ];
 
     /**
      * @var Manager
@@ -144,9 +165,28 @@ class Yii2ElasticsearchODM extends Component
 
         if (null === $this->client) {
             if (!empty($this->hosts)) {
-                $this->client = (new $className())
-                    ->setHosts($this->hosts)
-                    ->build();
+                $options = $this->clientBuilderOptions;
+                $builder = (new $className());
+
+                $builder->setHosts($this->hosts);
+
+                if (array_key_exists('username', $options) && array_key_exists('password', $options)) {
+                    $builder->setBasicAuthentication($options['username'], $options['password']);
+                }
+                if (array_key_exists('sslVerification', $options)) {
+                    $builder->setSSLVerification($options['sslVerification']);
+                }
+                if (array_key_exists('sslCert', $options)) {
+                    $builder->setSSLCert($options['sslCert']);
+                }
+                if (array_key_exists('sslKey', $options)) {
+                    $builder->setSSLKey($options['sslKey']);
+                }
+                if (array_key_exists('sslCA', $options)) {
+                    $builder->setCABundle($options['sslCA']);
+                }
+
+                $this->client = $builder->build();
             } else {
                 $this->client = new EmptyClient();
             }
