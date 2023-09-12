@@ -71,13 +71,15 @@ class Yii2ElasticsearchODM extends Component
         'password' => '',
         // Enable or disable the SSL verification (default is true).
         'sslVerification' => true,
-        // An array [$cert, $password] $cert is the name of a file containing a PEM formatted certificate,
+        // An array ['cert' => $cert, 'password' => $password]
+        // $cert is the name of a file containing a PEM formatted certificate,
         // $password if the certificate requires a password.
-        'sslCert' => [],
-        // An array [$key, $password] $key is the name of a file containing a private SSL key,
+        'sslCert' => ['cert' => '', 'password' => ''],
+        // An array ['key' => $key, 'password' => $password]
+        // $key is the name of a file containing a private SSL key,
         // $password if the private key requires a password.
-        'sslKey' => [],
-        // SSL CA bundle.
+        'sslKey' => ['key' => '', 'password' => ''],
+        // SSL CA bundle (The file path of http_ca.crt).
         'sslCA' => '',
     ];
 
@@ -176,11 +178,19 @@ class Yii2ElasticsearchODM extends Component
                 if (array_key_exists('sslVerification', $options)) {
                     $builder->setSSLVerification($options['sslVerification']);
                 }
-                if (array_key_exists('sslCert', $options)) {
-                    $builder->setSSLCert($options['sslCert']);
+                if (
+                    array_key_exists('sslCert', $options)
+                    && !empty($options['sslCert']['cert'])
+                    && !empty($options['sslCert']['password'])
+                ) {
+                    $builder->setSSLCert($options['sslCert']['cert'], $options['sslCert']['password']);
                 }
-                if (array_key_exists('sslKey', $options)) {
-                    $builder->setSSLKey($options['sslKey']);
+                if (
+                    array_key_exists('sslKey', $options)
+                    && !empty($options['sslKey']['key'])
+                    && !empty($options['sslKey']['password'])
+                ) {
+                    $builder->setSSLKey($options['sslKey']['key'], $options['sslKey']['password']);
                 }
                 if (array_key_exists('sslCA', $options)) {
                     $builder->setCABundle($options['sslCA']);

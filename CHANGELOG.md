@@ -1,6 +1,10 @@
 CHANGELOG
 =========
 
+## v0.1.7
+
+- Fix options for ClientBuilder
+
 ## v0.1.6
 
 - Add more options for ClientBuilder
